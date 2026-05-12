@@ -13,27 +13,24 @@ console.log(onlyOddPeople);
 
 // 2) 
 
-function maxNr(a,b){
-    if (a > b){
-return a;
-}
-return b;
-}
+const maxNr = ((a,b) =>{
+return a > b ? a : b;
+})
 console.log(maxNr(10, 5));
 // 3)
 
-function isLandscape(width, height){
+const isLandscape = ((width, height) =>{
     if(width > height){
         return true;
     }
         return false;
-}
+})
 console.log(isLandscape(1920, 1080));
 
 
 // 4)
 
-function fizzBuzz(input){
+const fizzBuzz = ((input) =>{
     if(typeof input !== "number"){
         return 'Not a Number';
     }
@@ -47,7 +44,7 @@ function fizzBuzz(input){
         return 'Buzz';
     }
     return input;
-}
+});
 console.log(fizzBuzz(3));
 console.log(fizzBuzz(5));
 console.log(fizzBuzz(15));
@@ -55,7 +52,7 @@ console.log(fizzBuzz("hello"));
 
 // 5) 
 
- function checkSpeed(speed){
+ const checkSpeed = ((speed) =>{
     const speedLimit = 70;
 
     if(speed <= speedLimit){
@@ -67,13 +64,13 @@ console.log(fizzBuzz("hello"));
         return 'License suspended'
     }
     return points;
- }
+ })
 console.log(checkSpeed(170));
 
 
  // 6)
 
- function countTruthy(array) {
+ const countTruthy = ((array) =>{
     let count = 0;
     for(let i = 0; i < array.length; i++){
         if(array[i]){
@@ -81,14 +78,14 @@ console.log(checkSpeed(170));
         }
     }
     return count;
- }
+ })
 console.log(countTruthy([0, null, undefined, 2, 3]));
 
 // 7)
 
 const numbers = [1, 3, 5, 6, 7, 9, 10];
 
-function sum(numbers) {
+const sum = ((numbers)=> {
   let total = 0;
 
   for (let i = 0; i < numbers.length; i++) {
@@ -98,7 +95,7 @@ function sum(numbers) {
   }
 
   return total;
-}
+})
 console.log(sum(numbers));
 
 // 8)
@@ -118,16 +115,16 @@ console.log("Mesatarja:", mesatarja);
 
 // 9)
 
-function getNumbersGreaterThan10(numbers) {
+const getNumbersGreaterThan10 = ((numbers) => {
   return numbers.filter((num) => num > 10);
-}
+})
 
 console.log(getNumbersGreaterThan10([5, 10, 11, 3, 25, 9, 12]));
 
 // 10 ) 
 
-function formatProductNames(products) {
+const formatProductNames = ((products) => {
   return products.map((product) => "Product: " + product);
-}
+})
 
 console.log(formatProductNames(["Laptop", "Mouse", "Keyboard"]));
