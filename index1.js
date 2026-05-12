@@ -6,7 +6,7 @@ let database = [
     isAdmin: true,
 
     login: function () {
-      console.log("Welcome back, " + this.username + "!");
+      console.log("Welcome back, " + database.username + "!");
     }
   },
   {
@@ -16,7 +16,7 @@ let database = [
     isAdmin: false,
 
     login: function () {
-      console.log("Welcome back, " + this.username + "!");
+      console.log("Welcome back, " + database.username + "!");
     }
   },
   {
@@ -26,7 +26,7 @@ let database = [
     isAdmin: false,
 
     login: function () {
-      console.log("Welcome back, " + this.username + "!");
+      console.log("Welcome back, " + database.username + "!");
     }
   }
 ];
@@ -71,7 +71,9 @@ database.forEach(user => {
 
     function isUserAdmin(username) {
 
-   database.forEach(function(user) {
+
+
+   database.forEach((user) => {
 
     if (user.username === username && user.isAdmin === true) {
       console.log("Admin access granted");
@@ -85,7 +87,7 @@ database.forEach(user => {
 
 }
     
-
+const isUserAdmin = (username) => {}
 
 
 
@@ -110,20 +112,19 @@ if (currentUser) {
 
     // 1. Show all posts
     case "1":
-      newsfeed.forEach(function(post) {
+      newsfeed.forEach = (post) => {
 
       console.log(post.username);
       console.log(post.timeline);
       console.log("Likes:", post.likes);
       console.log("Comments:", post.comments);
-
-      });
+      };
       break;
 
 
     // 2. Show my posts
     case "2":
-      newsfeed.forEach(function(post) {
+      newsfeed.forEach((post) => {
 
       if (post.username === currentUser.username) {
 
